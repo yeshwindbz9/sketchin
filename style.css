@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-color:lightgray;
+    height: 100vh;
+}
+
+.main{
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    justify-content:space-around;
+}
+
+.grid{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.grid>div {
+    height: auto;
+    flex: 1 0 auto;
+  
+    /* make columns vertical flexboxes */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid>div>* {
+    /* make rows evenly distributed */
+    flex: 1;
+  }
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 15px;
+}
+
+footer, header{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    color: whitesmoke;
+}
