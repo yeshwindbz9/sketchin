@@ -33,6 +33,8 @@ const blue = document.querySelector("#blue");
 blue.addEventListener("click", ()=>brushColor="blue");
 const green = document.querySelector("#green");
 green.addEventListener("click", ()=>brushColor="green");
+const black = document.querySelector("#black");
+black.addEventListener("click", ()=>brushColor="black");
 const eraser = document.querySelector("#eraser");
 eraser.addEventListener("click", ()=>brushColor="white");
 
