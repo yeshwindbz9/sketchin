@@ -11,7 +11,10 @@ function makeGrid(size){
             rowDiv.classList.add("row");
             rowDiv.style.border = "1px solid whitesmoke";
             // rowDiv.textContent = `${i}, ${j}`;
-            rowDiv.addEventListener("mouseenter", ()=>rowDiv.style["backgroundColor"]=brushColor);
+            // rowDiv.addEventListener("mouseenter", ()=>rowDiv.style["backgroundColor"]=brushColor);
+            ['mouseenter','touchmove', 'touchstart'].forEach( evt =>
+                rowDiv.addEventListener(evt, ()=>rowDiv.style["backgroundColor"]=brushColor)
+                );
             colDiv.appendChild(rowDiv);
         }
         area.appendChild(colDiv);
@@ -36,8 +39,8 @@ eraser.addEventListener("click", ()=>brushColor="white");
 const clear = document.querySelector("#clear");
 clear.addEventListener("click", clearGrid);
 const size16 = document.querySelector("#size16");
-size16.addEventListener("click", ()=>makeGrid(16));
 const size32 = document.querySelector("#size32");
-size32.addEventListener("click", ()=>makeGrid(32));
 const size64 = document.querySelector("#size64");
+size16.addEventListener("click", ()=>makeGrid(16));
+size32.addEventListener("click", ()=>makeGrid(32));
 size64.addEventListener("click", ()=>makeGrid(64));
